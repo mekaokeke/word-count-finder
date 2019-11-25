@@ -9,7 +9,7 @@ import java.util.HashMap;
 public class Count {
 	static HashMap<String, Integer> frequency = new HashMap<String, Integer>();
 	static int totalcount = 0;
-	static int removeReturnSpaces = -1;
+	static int removeReturnSpaces = -3;
 	static String max;
 	static int index = 0;
 	static HashMap<Integer, String> sentencelist = new HashMap<Integer, String>();
