@@ -9,7 +9,7 @@ import java.util.HashMap;
 public class Count {
 	static HashMap<String, Integer> frequency = new HashMap<String, Integer>();
 	static int totalcount = 0;
-	static int removeReturnSpaces = -3;
+	static int removeReturnSpaces = 0;
 	static String max;
 	static int index = 0;
 	static HashMap<Integer, String> sentencelist = new HashMap<Integer, String>();
@@ -27,7 +27,6 @@ public class Count {
 			words = line.split(" ");
 			//breaks lines into sentences by periods
 			sentences = line.split("\\.");
-			removeReturnSpaces++;
 			//counts all the words and their  occurrences
 			for (int i = 0; i < words.length; i++) {
 				totalcount++;
@@ -68,6 +67,8 @@ public class Count {
 			}
 			line = br.readLine();
 			}
+		//removes lines between paragraphs
+		removeReturnSpaces = frequency.get("");
 		totalcount -= removeReturnSpaces; 
 		System.out.println("The total word count is " + totalcount);
 		System.out.println("The top ten words from most occurring to 10th most occurring are:");
